@@ -1,0 +1,170 @@
+
+
+<app-card [iconClasses]="'fa fa-lg '"[title]="'Toggle'" [subTitle]="'Components'">
+  <app-toggle [isOn]="toggleValue" body>
+  </app-toggle>
+</app-card>
+
+
+
+
+<app-card  [title]="'Accordion'" [subTitle]="'Components'">
+    <app-accordian body [items]="accordionItems"></app-accordian>
+  </app-card>
+
+  <app-card [title]="'Counter'" [subTitle]="'Components'">
+    <app-counter body></app-counter>
+  </app-card>
+
+  <app-card [title]="'Password'" [subTitle]="'Components'">
+    <div body>
+      <app-password></app-password>
+    </div>
+  </app-card>
+ 
+  <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Skeleton Loader'" [subTitle]="'Components'">
+    <div body>
+      <app-skeleton-loader *ngIf="!loaded">
+      </app-skeleton-loader>
+      <p *ngIf="loaded">Skeleton Loader Text</p>
+    </div>
+ 
+    <button footer (click)="loaded = !loaded">Toggle</button>
+ 
+  </app-card>
+
+
+  <app-card [title]="'Countdown Timer'" [subTitle]="'Components'">
+
+    <app-countdown-timer body [time]="'July 19, 2023 11:33:44'"></app-countdown-timer>
+ 
+  </app-card>
+
+  <app-card  [title]="'Progress Bar'" [subTitle]="'Components'">
+    <app-progress-bar body [value]="progressValue"></app-progress-bar>
+ 
+    <button footer (click)="progressValue = 100;">Update</button>
+  </app-card>
+
+  <app-card [title]="'Bottom Sheet'" [subTitle]="'Components'">
+    <div body>
+      <app-bottom-sheet #bottomSheet>
+        <h1 (click)="bottomSheet.hide()">Bottom</h1>
+        <h1 (click)="bottomSheet.hide()">Sheet</h1>
+      </app-bottom-sheet>
+ 
+      <div class="footer" footer>
+        <button (click)="bottomSheet.show()">Show</button>
+      </div>
+ 
+    </div>
+  </app-card>
+
+
+
+
+
+
+
+
+  <app-card [title]="'Simple Table'" [subTitle]="'Components'">
+    <app-simple-table body></app-simple-table>
+  </app-card>
+
+  <app-card [title]="'Top of Page'" [subTitle]="'Components'">
+    <p body>Scroll 400px down the page to render.</p>
+ 
+  </app-card>
+
+
+
+
+
+  <app-card [title]="'Ribbon'" [subTitle]="'Components'">
+    <div body>
+      <app-ribbon  [content]="'Ribbon Text'" [location]="ribbonStyle.location" [type]="ribbonStyle.type"></app-ribbon>
+ 
+      <button (click)="ribbonStyle.location = RibbonLocation.TopRight" class="margin-button">Top-Right</button>
+      <button (click)="ribbonStyle.location = RibbonLocation.TopLeft"  class="margin-button">Top-Left</button>
+      <button (click)="ribbonStyle.location = RibbonLocation.BottomRight"  class="margin-button">Bottom-Right</button>
+      <button (click)="ribbonStyle.location = RibbonLocation.BottomLeft"  class="margin-button">Bottom-Left</button>
+      <button (click)="ribbonStyle.type = RibbonType.Info"  class="margin-button">Info</button>
+      <button (click)="ribbonStyle.type = RibbonType.Error"  class="margin-button">Error</button>
+      <button (click)="ribbonStyle.type = RibbonType.Success"  class="margin-button">Success</button>
+      <button (click)="ribbonStyle.type = RibbonType.Warning"  class="margin-button">Warning</button>
+ 
+    </div>
+  </app-card>
+
+  <app-card [title]="'Overlay'" [subTitle]="'Components'">
+    <div body>
+      <app-overlay [isShown]="isShownOverlay"></app-overlay>
+      <button (click)="isShownOverlay = true">Show Overlay</button>
+    </div>
+  </app-card>
+
+  <app-card [title]="'Quote'" [subTitle]="'Components'">
+    <app-quote body [quote]="'Dont Doubt The Fatman'" [author]="'Nikola Jokic'"
+      [occupation]="'2023 NBA Finals MVP'">
+    </app-quote>
+  </app-card>
+ 
+
+
+  <app-card [title]="'Modal'" [subTitle]="'Components'">
+    <div body>
+      <app-modal [title]="'Modal Example'" #modal>
+        <p>Some Content</p>
+      </app-modal>
+    </div>
+ 
+    <div footer>
+      <button (click)="modal.open()">Call Modal</button>
+    </div>
+  </app-card>
+
+  <app-card [title]="'Debounce Search'" [subTitle]="'Components'">
+    <app-debounce-search body (searchUpdate)="debounceExampleMethod($event)"></app-debounce-search>
+  </app-card>
+
+  <app-card [title]="'Search List'" [subTitle]="'Components'">
+    <app-search-list body [items]="['United States', 'India', 'Dubai']"></app-search-list>
+  </app-card>
+
+
+  <app-card [title]="'Pill Filters'" [subTitle]="'Components'">
+    <div body>
+      <app-pill-filters [pills]="['TX', 'FL', 'DN', 'NY', 'CA']"></app-pill-filters>
+    </div>
+  </app-card>
+
+
+
+  <app-card [title]="'Loader'" [subTitle]="'Components'">
+    <app-loader body [isLoading]="false" [loaderType]="loaderType"></app-loader>
+  </app-card>
+
+  <app-card  [title]="'Pill'" [subTitle]="'Components'">
+    <div body>
+      <app-pill [type]="PillType.Error" [iconClasses]="'fas fa-tag'" [label]="'Error'"></app-pill>
+      <app-pill [type]="PillType.Info" [iconClasses]="'fas fa-tag'" [label]="'Info'"></app-pill>
+      <app-pill [type]="PillType.Success" [iconClasses]="'fas fa-tag'" [label]="'Success'"></app-pill>
+      <app-pill [type]="PillType.Warning" [label]="'Warning'"></app-pill>
+    </div>
+  </app-card>
+
+
+
+
+
+
+<app-card [title]="'Card'" [subTitle]="'Components'">
+    <p footer>Footer Content</p>
+    <p body>Body Content</p>
+</app-card>
+
+<app-card [title]="'Banner Cut Out'" [subTitle]="'Components'">
+  <app-banner-cut-out body></app-banner-cut-out>
+</app-card>
+
+<app-top-of-page></app-top-of-page>

@@ -1,0 +1,44 @@
+<app-card [title]="'Sort By'" [subTitle]="'Pipes'">
+    <div body>
+      <h5>String Ascending</h5>
+      <p>{{ stringArray | sortBy }}</p>
+ 
+      <h5>String Descending</h5>
+      <p>{{ stringArray | sortBy : false }}</p>
+    </div>
+  </app-card>
+
+  <app-card [title]="'Truncate'" [subTitle]="'Pipes'">
+    <p body>
+      {{'In the 2022–23 season, the Nuggets secured the top seed in the Western Conference with 53 wins and 29 losses, two games ahead of the Memphis Grizzlies. The Nuggets defeated the Minnesota Timberwolves 4–1 in the first round of the 2023 playoffs, before defeating the Phoenix Suns 4–2 in the Conference Semifinals. The Nuggets"s playoff dominance continued in the Conference Finals; spearheaded by outstanding play from Jokić, who was named the Western Conference Finals Most Valuable Player, the team swept the Los Angeles Lakers in four games to advance to their first ever NBA Finals.[88] This also marked the first time that the Nuggets had beaten the Lakers in a playoff series (having previously been 0–7 against them), as well as the first playoff series sweep in franchise history.[89] In the NBA Finals, on June 12, 2023, the Nuggets would beat the Eastern Conference champion Miami Heat 4–1 to win their first NBA championship, with Jokić receiving the NBA Finals Most Valuable Player Award.[90][91]' | appTruncate : 75}}
+    </p>
+  </app-card>
+
+  <app-card [title]="'Filter Term'" [subTitle]="'Pipes'">
+    <div body>
+      {{ ['Hello', 'World', 'Hello World', 'hi', 'Worldi',] | filterTerm : 'World'  }}
+    </div>
+  </app-card>
+
+  <app-card [title]="'Credit Card Formatter'" [subTitle]="'Pipes'">
+    <div body>
+      <p>{{'1111222233334444' | creditcardFormatter}}</p>
+      <p>{{'111111111111111111111111111111' | creditcardFormatter}}</p>
+      <p>{{'a111222233334444' | creditcardFormatter}}</p>
+    </div>
+  </app-card>
+
+
+  <app-card [title]="'Flatten'" [subTitle]="'Pipes'">
+    <div body>
+      {{ flattenData | flatten}}
+    </div>
+
+ 
+    <div class="footer" footer>
+      <button class="btn btn-primary" (click)="modifyFlatten()" style="margin:15px">Modify</button>
+      <button class="btn btn-primary"  (click)="reassignFlatten()">Reassign</button>
+    </div>
+  </app-card>
+
+  
