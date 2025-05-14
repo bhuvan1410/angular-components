@@ -3,62 +3,62 @@ runtime: nodejs22
 
 handlers:
   - url: /(.+\.js)
-    static_files: dist/angular-examples/browser/\1
-    upload: dist/angular-examples/browser/(.+\.js)
+    static_files: dist/angular-examples/\1
+    upload: dist/angular-examples/(.+\.js)
     # secure: always
     redirect_http_response_code: 301
 
   - url: /(.+\.css)
-    static_files: dist/angular-examples/browser/\1
-    upload: dist/angular-examples/browser/(.+\.css)
+    static_files: dist/angular-examples/\1
+    upload: dist/angular-examples/(.+\.css)
     # secure: always
     redirect_http_response_code: 301
 
   - url: /(.+\.png)
-    static_files: dist/angular-examples/browser/\1
-    upload: dist/angular-examples/browser/(.+\.png)
+    static_files: dist/angular-examples/\1
+    upload: dist/angular-examples/(.+\.png)
     # secure: always
     redirect_http_response_code: 301
 
   - url: /(.+\.jpg)
-    static_files: web/dist/angular-examples/browser/\1
-    upload: dist/angular-examples/browser/(.+\.jpg)
+    static_files: web/dist/angular-examples/\1
+    upload: dist/angular-examples/(.+\.jpg)
     # secure: always
     redirect_http_response_code: 301
 
   - url: /(.+\.gif)
-    static_files: web/dist/angular-examples/browser/\1
-    upload: dist/angular-examples-ui/browser/(.+\.gif)
+    static_files: web/dist/angular-examples/\1
+    upload: dist/angular-examples-ui/(.+\.gif)
     # secure: always
     redirect_http_response_code: 301
 
   - url: /(.+\.svg)
-    static_files: dist/angular-examples-ui/browser/\1
-    upload: dist/angular-examples/browser/(.+\.svg)
+    static_files: dist/angular-examples-ui/\1
+    upload: dist/angular-examples/(.+\.svg)
     # secure: always
     redirect_http_response_code: 301
 
   - url: /favicon.ico
-    static_files: dist/angular-examples/browser/favicon.ico
-    upload: dist/angular-examples/browser/favicon.ico
+    static_files: dist/angular-examples/favicon.ico
+    upload: dist/angular-examples/favicon.ico
     # secure: always
     redirect_http_response_code: 301
 
   - url: /(.+\.json)
-    static_files: dist/angular-examples/browser/\1
-    upload: dist/angular-examples/browser/(.+\.json)
+    static_files: dist/angular-examples/\1
+    upload: dist/angular-examples/(.+\.json)
     # secure: always
     redirect_http_response_code: 301
 
   - url: /(.+)
-    static_files: dist/angular-examples/browser/index.html
-    upload: dist/angular-examples/browser/index.html
+    static_files: dist/angular-examples/index.html
+    upload: dist/angular-examples/index.html
     # secure: always
     redirect_http_response_code: 301
 
   - url: /
-    static_files: dist/angular-examples/browser/index.html
-    upload: dist/angular-examples/browser/index.html
+    static_files: dist/angular-examples/index.html
+    upload: dist/angular-examples/index.html
     # secure: always
     redirect_http_response_code: 301
 
