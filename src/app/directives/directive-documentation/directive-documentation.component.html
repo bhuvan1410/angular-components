@@ -1,0 +1,94 @@
+<app-card  [title]="'Auto Focus'" [subTitle]="'Directives'">
+    <div body>
+      <app-modal #modal>
+ 
+        <div *ngIf="!modal.isHidden">
+          <input type="text" appAutoFocus>
+        </div>
+ 
+      </app-modal>
+    </div>
+ 
+    <div footer class="footer">
+      <button (click)="modal.open()">Call Modal</button>
+    </div>
+  </app-card>
+
+
+  <app-card [title]="'Lazy Load Image'" [subTitle]="'Directives'">
+    <div body>
+      <img appLazyLoadImage width="500px"
+        src="https://images.unsplash.com/photo-1575747048196-15de2b891ec3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+        alt="image with lazy load">
+    </div>
+  </app-card>
+
+  <app-card [title]="'Highlight'" [subTitle]="'Directives'">
+  <div body>
+    <p appHighlight="lightyellow">Hover to highlight this paragraph</p>
+  </div>
+</app-card>
+
+<app-card [title]="'Debounce Click'" [subTitle]="'Directives'">
+  <div body>
+    <button [debounceTime]="1000" (debounceClick)="onDebouncedClick()">Click Me (debounced)</button>
+  </div>
+</app-card>
+
+<app-card [title]="'Auto Resize Textarea'" [subTitle]="'Directives'">
+  <div body>
+    <textarea appAutoResize rows="1" placeholder="Type to expand..."></textarea>
+  </div>
+</app-card>
+
+<app-card [title]="'Confirm Click'" [subTitle]="'Directives'">
+  <div body>
+    <button appConfirmClick="Are you sure?" (click)="onDelete()">Delete</button>
+  </div>
+</app-card>
+
+<app-card [title]="'Ripple Effect'" [subTitle]="'Directives'">
+  <div body>
+    <button appRippleEffect class="ripple-btn">Click with Ripple</button>
+  </div>
+</app-card>
+
+<app-card [title]="'Only Numbers'" [subTitle]="'Directives'">
+  <div body>
+    <input appOnlyNumbers placeholder="Enter digits only">
+  </div>
+</app-card>
+
+<app-card [title]="'Uppercase Input'" [subTitle]="'Directives'">
+  <div body>
+    <input appUppercase placeholder="Type lowercase letters">
+  </div>
+</app-card>
+
+<app-card [title]="'Trim Input'" [subTitle]="'Directives'">
+  <div body>
+    <input appTrimInput placeholder="Type with spaces and blur">
+  </div>
+</app-card>
+
+<app-card [title]="'Click Outside'" [subTitle]="'Directives'">
+  <div body>
+    <div (clickOutside)="onOutsideClick()" style="padding: 20px; border: 1px solid #ccc;">
+      Click inside this box, then click outside to trigger event.
+    </div>
+  </div>
+</app-card>
+
+<app-card [title]="'Show If Mobile'" [subTitle]="'Directives'">
+  <div body>
+    <div *appShowIfMobile>This content is visible only on mobile devices</div>
+  </div>
+</app-card>
+
+<app-card [title]="'Show If Desktop'" [subTitle]="'Directives'">
+  <div body>
+    <div *appShowIfDesktop>This content is visible only on desktop</div>
+  </div>
+</app-card>
+
+  

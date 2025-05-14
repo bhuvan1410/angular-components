@@ -1,0 +1,11 @@
+<div class = "toggle-container" (click)="toggle()">
+    <div class="toggle-value" [class.is-off]="!isOn">
+        
+    </div>
+
+    
+</div>
+
+<h2 class="toggle-text">
+    {{ isOn ? 'On' : 'Off' }}
+</h2>

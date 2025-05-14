@@ -1,0 +1,68 @@
+runtime: nodejs22
+
+
+handlers:
+  - url: /(.+\.js)
+    static_files: dist/angular-examples/browser/\1
+    upload: dist/angular-examples/browser/(.+\.js)
+    # secure: always
+    redirect_http_response_code: 301
+
+  - url: /(.+\.css)
+    static_files: dist/angular-examples/browser/\1
+    upload: dist/angular-examples/browser/(.+\.css)
+    # secure: always
+    redirect_http_response_code: 301
+
+  - url: /(.+\.png)
+    static_files: dist/angular-examples/browser/\1
+    upload: dist/angular-examples/browser/(.+\.png)
+    # secure: always
+    redirect_http_response_code: 301
+
+  - url: /(.+\.jpg)
+    static_files: web/dist/angular-examples/browser/\1
+    upload: dist/angular-examples/browser/(.+\.jpg)
+    # secure: always
+    redirect_http_response_code: 301
+
+  - url: /(.+\.gif)
+    static_files: web/dist/angular-examples/browser/\1
+    upload: dist/angular-examples-ui/browser/(.+\.gif)
+    # secure: always
+    redirect_http_response_code: 301
+
+  - url: /(.+\.svg)
+    static_files: dist/angular-examples-ui/browser/\1
+    upload: dist/angular-examples/browser/(.+\.svg)
+    # secure: always
+    redirect_http_response_code: 301
+
+  - url: /favicon.ico
+    static_files: dist/angular-examples/browser/favicon.ico
+    upload: dist/angular-examples/browser/favicon.ico
+    # secure: always
+    redirect_http_response_code: 301
+
+  - url: /(.+\.json)
+    static_files: dist/angular-examples/browser/\1
+    upload: dist/angular-examples/browser/(.+\.json)
+    # secure: always
+    redirect_http_response_code: 301
+
+  - url: /(.+)
+    static_files: dist/angular-examples/browser/index.html
+    upload: dist/angular-examples/browser/index.html
+    # secure: always
+    redirect_http_response_code: 301
+
+  - url: /
+    static_files: dist/angular-examples/browser/index.html
+    upload: dist/angular-examples/browser/index.html
+    # secure: always
+    redirect_http_response_code: 301
+
+automatic_scaling:
+  target_cpu_utilization: 0.90
+  min_instances: 1
+  max_instances: 1

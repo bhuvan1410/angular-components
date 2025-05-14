@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let key of getTableHeaderKeys()">{{ key.toUpperCase() }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of tableData">
+      <td *ngFor="let key of getTableHeaderKeys()">
+        {{ row[key] }}
+      </td>
+    </tr>
+  </tbody>
+</table>

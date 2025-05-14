@@ -1,0 +1,41 @@
+.toggle-container {
+    position: relative;
+    width: 100px;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 15px;
+    height: 70px;
+    cursor: pointer;
+  
+    .toggle-value {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: rgb(22, 225, 120);
+      border-radius: 50%;
+      top: 50%;
+      bottom: 50%;
+      transform: translateY(-50%);
+      right: 5%;
+      transition: all 0.3s;
+  
+      &.is-off {
+        right: 65%;
+        background-color: red;
+
+      }
+    }
+
+
+    
+  }
+
+  .toggle-text{
+
+    position: absolute;
+    right:50%;
+
+    top:15%;
+
+        
+  }

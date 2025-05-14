@@ -1,0 +1,15 @@
+steps:
+  #   # Step 1: Set Node.js version and install npm dependencies
+  - name: "node:18" # Choose the Node.js version you need
+    entrypoint: "npm"
+    args: ["install", "--force"]
+
+
+  #   # Step 2: Build the Angular application
+  - name: "node:18" # Use the same Node.js version as in Step 1
+    entrypoint: "npm"
+    args: ["run", "build"]
+
+  # Step 3: Deploy the built Angular app to Google Cloud App Engine (you can adjust this for your deployment target)
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy", "app.yaml"] # Use the appropriate deployment configuration file (e.g., app.yaml)
