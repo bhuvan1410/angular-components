@@ -13,3 +13,6 @@ steps:
   # Step 3: Deploy the built Angular app to Google Cloud App Engine (you can adjust this for your deployment target)
   - name: "gcr.io/cloud-builders/gcloud"
     args: ["app", "deploy", "app.yaml"] # Use the appropriate deployment configuration file (e.g., app.yaml)
+
+options:
+  logging: CLOUD_LOGGING_ONLY
