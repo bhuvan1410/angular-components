@@ -1,5 +1,5 @@
 runtime: nodejs22
-service: angular-components
+
 
 handlers:
   - url: /(.+\.js)
